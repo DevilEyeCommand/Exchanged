@@ -1,0 +1,38 @@
+[
+  {
+    "menuName": "หน้าหลัก",
+    "menuBottom": "หน้าหลัก",
+    "bottomShow": false,
+    "url": "/"
+  },
+  {
+    "menuName": "ข้อมูลท่องเที่ยวอำเภอ",
+    "menuBottom": "ข้อมูลที่ยว",
+    "bottomShow": true,
+    "url": "/district-info"
+  },
+  {
+    "menuName": "สถานที่ท่องเที่ยว",
+    "menuBottom": "ที่เที่ยว",
+    "bottomShow": true,
+    "url": "/category/travel"
+  },
+  {
+    "menuName": "คาเฟ่ ร้านอาหาร",
+    "menuBottom": "คาเฟ่",
+    "bottomShow": true,
+    "url": "/category/food"
+  },
+  {
+    "menuName": "ที่พัก",
+    "menuBottom": "ที่พัก",
+    "bottomShow": true,
+    "url": "/category/hotel"
+  },
+  {
+    "menuName": "เกี่ยวกับเรา",
+    "menuBottom": "เกี่ยวกับเรา",
+    "bottomShow": false,
+    "url": "/about"
+  }
+]
