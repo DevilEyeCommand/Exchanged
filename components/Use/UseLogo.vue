@@ -1,56 +1,101 @@
 <template>
-  <button class="button" data-text="Awesome">
-    <span class="actual-text text-primary">&nbsp;Tourism&nbsp;</span>
-    <span aria-hidden="true" class="hover-text ">&nbsp;Tourism&nbsp;</span>
-  </button>
+  <div>
+    <div class="loader">
+      <p class="text-base-500">อัตราสกุลเงิน</p>
+      <div class="words">
+        <span class="word">USD</span>
+        <span class="word">THB</span>
+        <span class="word">JPY</span>
+        <span class="word">EUR</span>
+        <span class="word">etc.</span>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup></script>
 
 <style scoped>
-/* From Uiverse.io by satyamchaudharydev */
-/* === removing default button style ===*/
-.button {
-  margin: 0;
-  height: auto;
-  background: transparent;
-  padding: 0;
-  border: none;
-  cursor: pointer;
+/* From Uiverse.io by kennyotsu */
+
+.loader {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
 }
 
-/* button styling */
-.button {
-  --border-right: 6px;
-  --border-color: #0033ab;
-  /*--text-stroke-color: rgba(200, 0, 255, 0.6);*/
-  --animation-color: #37ff8b;
-  --fs-size: 2em;
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: var(--fs-size);
-  font-family: "Arial";
-  position: relative;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
-}
-/* this is the text, when you hover on button */
-.hover-text {
-  position: absolute;
-  box-sizing: border-box;
-  content: attr(data-text);
-  color: var(--animation-color);
-  width: 0%;
-  inset: 0;
-  /*border-right: var(--border-right) solid var(--animation-color);*/
+.words {
   overflow: hidden;
-  transition: 0.5s;
-  -webkit-text-stroke: 1px var(--animation-color);
+  position: relative;
 }
-/* hover */
-.button:hover .hover-text {
-  width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color));
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #a600ff;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
 }
 </style>
