@@ -6,7 +6,7 @@
 			<div class="flex flex-col">
 				<!-- <div class="text-xl lg:text-3xl text-primary">Tour Sisaket</div> -->
 				<UseLogo />
-				<div class="text-center">sisaket-tourism.com</div>
+				<div class="text-center">Exchanged.com</div>
 			</div>
 			<div>
 				<img class="w-20" src="/assets/logo.png" />
