@@ -14,7 +14,7 @@
             class="input input-bordered input-primary w-full max-w-xs bg-neutral"
           />
           <div class="label">
-            <span class="label-text-alt text-base-300">{{ selectOne != '' && selectTwo != ''?cashOne+' '+selectOne+' = '+cashTwo+' '+selectTwo:'' }}</span>
+            <span class="label-text-alt text-warning">{{ selectOne != '' && selectTwo != ''?cashOne+' '+selectOne+' = '+cashTwo+' '+selectTwo:'' }}</span>
           </div>
         </label>
       </div>
@@ -36,7 +36,7 @@
             class="input input-bordered input-primary w-full max-w-xs bg-neutral"
           />
           <div class="label">
-            <span class="label-text-alt text-base-300">{{ selectOne != '' && selectTwo != ''?cashTwo+' '+selectTwo+' = '+cashOne+' '+selectOne:'' }}</span>
+            <span class="label-text-alt text-warning">{{ selectOne != '' && selectTwo != ''?cashTwo+' '+selectTwo+' = '+cashOne+' '+selectOne:'' }}</span>
           </div>
         </label>
       </div>
