@@ -2,9 +2,9 @@
 
 <template>
 	<div class="h-full flex flex-col ">
-		<WhereUGo />
-		<Highlight />
-		<Province />
+		<Home/>
 	</div>
 </template>
-<script setup></script>
+<script setup>
+
+</script>

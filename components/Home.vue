@@ -1,11 +1,11 @@
 <template>
-    <div>
-
-    </div>
+  <div class="">
+    <UseCardExchage />
+    <UseChart />
+  </div>
 </template>
 
 <script setup>
-navigateTo('/')
 </script>
 
 <style lang="scss" scoped>

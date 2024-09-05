@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare & npx prisma db push"
+    "postinstall": "nuxt prepare "
   },
   "dependencies": {
     "@ant-design-vue/nuxt": "^1.4.2",
@@ -15,12 +15,12 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@prisma/client": "^5.19.0",
+    "axios": "^1.7.7",
+    "echarts": "^5.5.1",
     "nuxt": "^3.13.0",
+    "nuxt-echarts": "^0.2.3",
     "nuxt-sass-resources-loader": "^2.0.5",
-    "prisma": "^5.19.0",
-    "quill": "^2.0.2",
-    "vue": "latest",
-    "vue3-quill-editor-vite": "^0.0.5"
+    "vue": "latest"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.4.4",
