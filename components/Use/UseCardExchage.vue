@@ -2,7 +2,7 @@
   <div class="flex justify-center items-center gap-4 py-4">
     <div class="card bg-neutral text-neutral-content w-96">
       <div class="card-body items-center text-center">
-        <select v-model="selectOne" class="select w-full max-w-xs select-error bg-neutral">
+        <select v-model="selectOne" @change="calculated(0)" class="select w-full max-w-xs select-error bg-neutral">
           <template v-for="(item, index) in Object.entries(data.conversions.USD)" :key="index">
             <option v-if="item[0] != selectTwo" :value="item[0]">{{ item[0] }}</option>
           </template>
@@ -19,12 +19,12 @@
         </label>
       </div>
     </div>
-    <button class="btn">
+    <button class="btn" @click="swapCurrency(selectOne,selectTwo)">
       <Icon name="system-uicons:reverse" size="50" />
     </button>
     <div class="card bg-neutral text-neutral-content w-96">
       <div class="card-body items-center text-center">
-        <select v-model="selectTwo" class="select w-full max-w-xs select-error bg-neutral">
+        <select v-model="selectTwo" @change="calculated(1)" class="select w-full max-w-xs select-error bg-neutral">
           <template v-for="(item, index) in Object.entries(data.conversions.USD)" :key="index">
             <option v-if="item[0] != selectOne" :value="item[0]">{{ item[0] }}</option>
           </template>
@@ -53,10 +53,14 @@ let cashTwo = ref(1)
 onMounted(() => {
 calculated(0)
 })
+const swapCurrency = async (left,right) =>{
+  selectOne.value = right
+  selectTwo.value = left
+  calculated(0)
+}
 const calculated = async (select) => {
   const response = await fetch('https://api.currencybeacon.com/v1/convert?api_key=XxQAzbUQ0jCGjlWqTy100dtOkSVmuSgj&from='+selectOne.value+'&to='+selectTwo.value+'&amount='+cashOne.value+'')
   const currencydata = await response.json()
-  console.log(currencydata)
   if (select == 0) {
     cashOne.value = currencydata.amount.toFixed(2)
     cashTwo.value = currencydata.value.toFixed(2)
