@@ -65,7 +65,7 @@
 		<div class="avatar fixed bottom-4">
 			<div class="ring-white ring-offset-base-100 w-16 rounded-full ring ring-offset-2">
 				<img
-					src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+					src="/assets/logo.png"
 				/>
 			</div>
 		</div>

@@ -53,7 +53,7 @@
   display: block;
   height: 100%;
   padding-left: 6px;
-  color: #a600ff;
+  color: #00FF2E;
   animation: spin_4991 4s infinite;
 }
 

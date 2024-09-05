@@ -3,11 +3,7 @@
     <footer class="footer bg-primary text-white p-10">
       <aside>
         <img src="/assets/logo.png" class="w-20" />
-        <p class="hover:text-black cursor-pointer">
-          Tour Sisaket
-          <br />
-          sisaket-tourism.com
-        </p>
+        <p class="hover:text-black cursor-pointer">Exchanged.COM</p>
       </aside>
       <nav>
         <h6 class="footer-title">menu</h6>
@@ -20,9 +16,9 @@
         </NuxtLink>
       </nav>
       <nav>
-        <h6 class="footer-title flex items-center">social</h6>
-        <ul class="social-links ">
-          <li v-for="(link, index) in mockSocail" :key="index">
+        <h6 class="footer-title flex items-center">Consultant</h6>
+        <ul class="social-links">
+          <li v-for="(link, index) in consultant" :key="index">
             <NuxtLink :to="link.url">
               <Icon :name="link.icon" /> {{ link.name }}
             </NuxtLink>
@@ -31,8 +27,12 @@
       </nav>
       <nav>
         <h6 class="footer-title">Developer</h6>
-        <a class="link link-hover">ณัฐธิวุฒิ คุ้มกล่ำ</a>
-        <a class="link link-hover">นายสุวิจักขณ์ สีทาดี</a>
+        <li v-for="(link, index) in Name" :key="index">
+          <NuxtLink :to="link.url">
+            <Icon :name="link.icon" />
+            {{ link.name }}
+          </NuxtLink>
+        </li>
       </nav>
     </footer>
   </div>
@@ -41,26 +41,24 @@
 <script setup>
 import menuItems from "../../assets/json/menu.json";
 
-const mockSocail = [
+const Name = [
   {
-    name: "Facebook",
-    url: "https://www.facebook.com",
-    icon: "entypo-social:facebook",
+    name: "นายอัครชัย เพรชสี",
+    url: "https://github.com/DevilEyeCommand",
+    icon: "skill-icons:github-light",
   },
   {
-    name: "X",
-    url: "https://twitter.com",
-    icon: "skill-icons:twitter",
+    name: "นายชัยมงคล โสภาสุข",
+    url: "https://github.com/ChaimongkhonS",
+    icon: "skill-icons:github-light",
   },
+];
+
+const consultant = [
   {
-    name: "Instagram",
-    url: "https://www.instagram.com",
-    icon: "skill-icons:instagram",
-  },
-  {
-    name: "YouTube",
-    url: "https://www.youtube.com",
-    icon: "ph:youtube-logo-fill",
+    name: "NaNa'",
+    url: "https://github.com/onenarok777",
+    icon: "skill-icons:github-light",
   },
 ];
 </script>

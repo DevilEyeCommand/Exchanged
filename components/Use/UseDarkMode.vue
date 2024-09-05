@@ -58,7 +58,7 @@ onMounted(() =>{
     --bb8-diameter: 4.375em;
     --radius: 99em;
     --transition: 0.4s;
-    --accent: #E7A339;
+    --accent: #033E8A;
     --bb8-bg: #fff;
   }
   
@@ -577,7 +577,7 @@ onMounted(() =>{
     width: 100%;
     height: 30%;
     bottom: 0;
-    background: #E7A339;
+    background: #033E8A;
     z-index: 1;
   }
   

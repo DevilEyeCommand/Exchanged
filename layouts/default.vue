@@ -1,11 +1,11 @@
 <!-- @format -->
 
 <template>
-	<div>
-		<LayoutNavbar />
+  <div>
+    <LayoutNavbar />
 
-		<slot />
-		<LayoutFooter  />
-	</div>
+    <slot />
+    <LayoutFooter />
+  </div>
 </template>
 <script setup></script>
